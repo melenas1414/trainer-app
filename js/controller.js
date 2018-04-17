@@ -2,12 +2,12 @@
 var appTrainer = angular.module('appTrainer', []);
 
 appTrainer.controller('ListarColores',  ['$scope','$timeout',function ($scope, $timeout) {
-    $scope.colores = ['#ffa'];
-    $scope.repeticion = 0;
-    $scope.tiempo = 0;
+    $scope.colores = ['#FFF000','#000FFF'];
+    $scope.repeticion = 4;
+    $scope.tiempo = 4;
     $scope.segundos = 0;
     $scope.formulario = 'd-block';
-	    	 			$scope.resultado = 'd-none';
+	$scope.resultado = 'd-none';
     $scope.registrar = function() {
     	 if(typeof($scope.color) !== 'undefined') {
     	 	if ( $scope.colores.length<10){
@@ -60,10 +60,13 @@ appTrainer.controller('ListarColores',  ['$scope','$timeout',function ($scope, $
 	    	 				rand = 0;
 	    	 			}
 	   	 				rand=random(0,$scope.colores.length,rand);
+
+	   	 				if ($scope.sonido){
+						    var sonido = angular.element(document.getElementById('sonido'));
+						    sonido[0].play();
+						}
 	    	 			$scope.background=$scope.colores[rand];
 	    	 			$scope.rand = rand;
-	    	 			console.log('Color: '+rand);
-	    	 			console.log('repeticion: '+i);
 	    	 			i += 1;
 			            $timeout(cambiodefondo,tiempo);
 		     		}
