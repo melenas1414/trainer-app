@@ -1,6 +1,13 @@
-<a href="http://www.bootstrapdash.com/demo/stellar-admin-free/jquery/" target="_blank"><img src="screenshot.jpg"></a>
 
-<h1>Stellar</h1>
+
+<h1>Trainer APP</h1>
+App para manejar tiempos de entrenamiento con colores y numeros.
+
+
+
+El sistema Incorpora Stellar, aquí disponen de toda la información para el buen funcionamiento.
+
+<h2>Stellar</h2>
 Stellar admin dashboard is completely based on the latest version of Bootstrap 4. Stellar Admin is designed to reflect the simplicity and svelte of the components and UI elements and coded to perfection with well-organized code. This makes it easy to change its looks to anything that you desire on your admin panel. Stellar Admin is a perfect pick to create any kind of simple or complex backend applications or any other web applications.
 <br><br>
 The dashboard is always kept up to date and kept up with the latest technologies. Stellar is a completely responsive admin dashboard that gives you an effortless viewing experience on mobile devices as well as small and large desktops.
