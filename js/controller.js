@@ -3,7 +3,7 @@ var appTrainer = angular.module('appTrainer', []);
 
 
 
-appTrainer.controller('ListarColores',  ['$scope','$timeout',function ($scope, $timeout) {
+appTrainer.controller('ListarColores',  ['$scope','$timeout','$location', '$anchorScroll',function ($scope, $timeout,$location, $anchorScroll) {
     $scope.colores = ['#FFF000','#000FFF'];
     $scope.repeticion = 4;
     $scope.tiempo = 4;
@@ -34,6 +34,12 @@ appTrainer.controller('ListarColores',  ['$scope','$timeout',function ($scope, $
     $scope.ejecutar = function() {
     	 if(typeof($scope.tiempo) !== 'undefined'){
     	 	if ($scope.colores.length > 1) {
+    	 		// set the location.hash to the id of
+		      // the element you wish to scroll to.
+		      $location.hash('card');
+
+		      // call $anchorScroll()
+		      $anchorScroll();
 	    	 	var tiempo = $scope.tiempo * 1000 ;
 	    	 	$scope.formulario = 'd-none';
 	    	 	$scope.resultado = 'd-block';
@@ -89,7 +95,7 @@ appTrainer.controller('ListarColores',  ['$scope','$timeout',function ($scope, $
 	    return false;
     }
 }]);
-appTrainer.controller('ListarNumeros',  ['$scope','$timeout',function ($scope, $timeout) {
+appTrainer.controller('ListarNumeros',  ['$scope','$timeout','$location', '$anchorScroll',function ($scope, $timeout,$location, $anchorScroll) {
     
     $scope.repeticion = 4;
     $scope.tiempo = 4;
@@ -99,6 +105,12 @@ appTrainer.controller('ListarNumeros',  ['$scope','$timeout',function ($scope, $
 	$scope.resultado = 'd-none';
     $scope.ejecutar = function() {
     	 if(typeof($scope.tiempo) !== 'undefined'){
+    	 	 // set the location.hash to the id of
+		      // the element you wish to scroll to.
+		      $location.hash('card');
+
+		      // call $anchorScroll()
+		      $anchorScroll();
 	    	 	var tiempo = $scope.tiempo * 1000 ;
 	    	 	$scope.formulario = 'd-none';
 	    	 	$scope.resultado = 'd-block';
